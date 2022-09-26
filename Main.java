@@ -8,12 +8,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int ans = n / 100 + n % 100 / 10 + n % 10;
-        if (n % 2 == 0) {
-            System.out.println(ans + " " + (n + 2));
-        }
-        else {
-            System.out.println(ans + " " + (n + 1));
-        }
+        System.out.println(ans + " " + (n + 1 + ((n + 1) % 2)));
     }
 
     public static void task2() {
