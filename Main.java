@@ -8,8 +8,7 @@ public class Main {
         boolean b;
         for (int i = 0; i < n; ++i) {
             b = in.nextBoolean();
-            if (!b) continue;
-            mass[i/8] = (byte) (mass[i/8] | (1 << (i%8)));
+            if (b) mass[i/8] = (byte) (mass[i/8] | (1 << (i%8)));
         }
         for (int i = 0; i < n ; ++i) {
             System.out.print(((mass[i/8] & (1 << (i%8))) != 0) + " ");
